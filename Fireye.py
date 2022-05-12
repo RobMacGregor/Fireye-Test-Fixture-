@@ -1,8 +1,14 @@
 >>> import machine
 >>> import time
->>> pin = machine.Pin(0, machine.Pin.OUT)
+>>> POC = machine.Pin(0, machine.Pin.OUT)
+>>> interlock = machine.Pin(1, machine.Pin.OUT)
+                           
 >>> for i in range(10):
-...     pin.on()
-...     time.sleep(0.5)
+...     POC.on()  
+... 
+
+
+...     time.sleep(10)
 ...     pin.off()
-...     time.sleep(0.5)
+
+...     time.sleep(60)
